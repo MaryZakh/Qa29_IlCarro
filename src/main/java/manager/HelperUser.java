@@ -33,7 +33,7 @@ public class HelperUser extends HelperBase {
 //        WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
 //        String text = element.getText();
 //        return text;
-        // pause(2000);
+        pause(1000);
         return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
 
     }
@@ -90,13 +90,16 @@ public class HelperUser extends HelperBase {
     }
 
     public void checkPolicyXY() {
-        WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
-        Rectangle rec = label.getRect();
-        int w = rec.getWidth();
-        int xOffSet = -w/2;
-        Actions actions = new Actions(wd);
-        actions.moveToElement(label, xOffSet, 0).click().release().perform();
+        if (!wd.findElement(By.id("terms-of-use")).isSelected()) {
+            WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
+            Rectangle rec = label.getRect();
+            int w = rec.getWidth();
+            int xOffSet = -w / 2;
+            Actions actions = new Actions(wd);
+            actions.moveToElement(label, xOffSet, 0).click().release().perform();
+        }
     }
+
 
     public void login(User user) {
         openLoginForm();
@@ -104,4 +107,5 @@ public class HelperUser extends HelperBase {
         submit();
         clickOkButton();
     }
+
 }
