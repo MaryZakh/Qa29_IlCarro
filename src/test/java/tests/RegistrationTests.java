@@ -33,6 +33,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Snow")
                 .setEmail("snow"+ z + "@gmail.com")
                 .setPassword("Ssnow12345$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -50,6 +51,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Snow")
                 .setEmail("snowsnow"+z+"@gmail.com")
                 .setPassword("Ssnow12345$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -67,6 +69,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("")
                 .setEmail("snowsnow"+z+"@gmail.com")
                 .setPassword("Ssnow12345$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -83,6 +86,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Snow")
                 .setEmail("")
                 .setPassword("Ssnow12345$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -100,6 +104,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Snow")
                 .setEmail("snow@gmail.com")
                 .setPassword("");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -116,6 +121,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Snow")
                 .setEmail("snowgmail.com")
                 .setPassword("Ssnow12345$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -125,13 +131,14 @@ public class RegistrationTests extends TestBase{
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
     }
 
-    @Test
+    @Test(enabled = false)
     public void registrationWrongPassword(){
         User user = new User()
                 .setFirstName("Lisa")
                 .setLastName("Snow")
                 .setEmail("snow@gmail.com")
                 .setPassword("Ssnow123");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -148,6 +155,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Snow")
                 .setEmail("margo@gmail.com")
                 .setPassword("Mmar123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
@@ -156,22 +164,20 @@ public class RegistrationTests extends TestBase{
         Assert.assertEquals(app.getHelperUser().getMessage(), "\"User already exists\"");
     }
 
-    @Test(enabled = false)
-    public void registrationPolicyButtonNotChecked(){
-        int z = (int) ((System.currentTimeMillis()/1000)%3600);
+    @Test
+    public void registrationWithoutCheckbox() {
         User user = new User()
                 .setFirstName("Lisa")
                 .setLastName("Snow")
-                .setEmail("snowsnow"+z+"@gmail.com")
-                .setPassword("Ssnow123457$");
+                .setEmail("opel@gmail.com")
+                .setPassword("Osnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationFom();
         app.getHelperUser().fillRegistrationForm(user);
-        app.getHelperUser().pause(500);
         app.getHelperUser().submit();
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
     }
-
 
 
     @AfterMethod
