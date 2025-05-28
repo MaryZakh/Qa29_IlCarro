@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="946f8911-e4bd-4817-b220-52d53d78458d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SearchCarTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddNewCarTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddNewCarTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperCar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,41 +82,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.AddNewCarTests.addNewCarSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewCarTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginEmptyEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginEmptyPassword.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginSuccess1.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginUnregistered.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginWrongEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginWrongPassword.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationEmptyEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationEmptyLastName.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationEmptyName.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationEmptyPassword.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationExistsUser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationPolicyButtonNotChecked.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationWrongEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationWrongPassword.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Qa_29/Qa29_PhoneBook&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AddNewCarTests.addNewCarSuccess.executor": "Run",
+    "Gradle.AddNewCarTests.executor": "Run",
+    "Gradle.LoginTests.executor": "Run",
+    "Gradle.LoginTests.loginEmptyEmail.executor": "Run",
+    "Gradle.LoginTests.loginEmptyPassword.executor": "Run",
+    "Gradle.LoginTests.loginSuccess.executor": "Run",
+    "Gradle.LoginTests.loginSuccess1.executor": "Run",
+    "Gradle.LoginTests.loginUnregistered.executor": "Run",
+    "Gradle.LoginTests.loginWrongEmail.executor": "Run",
+    "Gradle.LoginTests.loginWrongPassword.executor": "Run",
+    "Gradle.LoginTests.test.executor": "Run",
+    "Gradle.RegistrationTests.executor": "Run",
+    "Gradle.RegistrationTests.registrationEmptyEmail.executor": "Run",
+    "Gradle.RegistrationTests.registrationEmptyLastName.executor": "Run",
+    "Gradle.RegistrationTests.registrationEmptyName.executor": "Run",
+    "Gradle.RegistrationTests.registrationEmptyPassword.executor": "Run",
+    "Gradle.RegistrationTests.registrationExistsUser.executor": "Run",
+    "Gradle.RegistrationTests.registrationPolicyButtonNotChecked.executor": "Run",
+    "Gradle.RegistrationTests.registrationSuccess.executor": "Run",
+    "Gradle.RegistrationTests.registrationWrongEmail.executor": "Run",
+    "Gradle.RegistrationTests.registrationWrongPassword.executor": "Run",
+    "Gradle.SearchCarTests.searchCurrentMonthSuccess.executor": "Run",
+    "Gradle.SearchCarTests.searchCurrentYearSuccess.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/marii/Downloads/QA_29_IlCarro11"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Qa_29\Qa29_IlCarro" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests">
+  <component name="RunManager" selected="Gradle.SearchCarTests.searchCurrentYearSuccess">
     <configuration name="AddNewCarTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -136,54 +133,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;tests.AddNewCarTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="AddNewCarTests.addNewCarSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.AddNewCarTests.addNewCarSuccess&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.LoginTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -242,13 +191,61 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SearchCarTests.searchCurrentMonthSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.SearchCarTests.searchCurrentMonthSuccess&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SearchCarTests.searchCurrentYearSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.SearchCarTests.searchCurrentYearSuccess&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SearchCarTests.searchCurrentYearSuccess" />
+        <item itemvalue="Gradle.SearchCarTests.searchCurrentMonthSuccess" />
         <item itemvalue="Gradle.RegistrationTests" />
         <item itemvalue="Gradle.RegistrationTests.registrationPolicyButtonNotChecked" />
         <item itemvalue="Gradle.AddNewCarTests" />
-        <item itemvalue="Gradle.AddNewCarTests.addNewCarSuccess" />
-        <item itemvalue="Gradle.LoginTests" />
       </list>
     </recent_temporary>
   </component>
