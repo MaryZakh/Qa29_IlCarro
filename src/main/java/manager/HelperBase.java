@@ -1,9 +1,10 @@
 package manager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
+
+import java.io.File;
+import java.io.IOException;
 
 public class HelperBase {
     WebDriver wd;
@@ -12,7 +13,7 @@ public class HelperBase {
         this.wd = wd;
     }
 
-    public void click(By locator){
+    public void click(By locator) {
         wd.findElement(locator).click();
     }
 
@@ -26,13 +27,28 @@ public class HelperBase {
         }
     }
 
-    public void clearNew(WebElement element){
+    public void clearNew(WebElement element) {
         element.sendKeys(" ");
         element.sendKeys(Keys.BACK_SPACE);
 
     }
 
-    public void pause(int time){
+
+    public void clearTextBox(By locator) {
+        WebElement el = wd.findElement(locator);
+        String os = System.getProperty("os.name");
+        System.out.println(os);
+
+        if (os.startsWith("Win")) {
+            el.sendKeys(Keys.CONTROL, "a");
+        } else {
+            el.sendKeys(Keys.COMMAND, "a");
+
+        }
+        el.sendKeys(Keys.DELETE);
+    }
+
+    public void pause(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
@@ -40,8 +56,8 @@ public class HelperBase {
         }
     }
 
-    public boolean isElementPresent(By locator){
-        return wd.findElements(locator).size()>0;
+    public boolean isElementPresent(By locator) {
+        return wd.findElements(locator).size() > 0;
     }
 
     public void submit() {
@@ -55,5 +71,15 @@ public class HelperBase {
         pause(1000);
         return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
 
+    }
+
+    public void getScreen(String link) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
+        File tmp = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        try {
+            Files.copy(tmp, new File(link));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
